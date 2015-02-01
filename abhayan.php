@@ -6,5 +6,5 @@
  * Time: 10:57 AM
  */
 
-echo "-testing";
+echo "testing";
 ?>
