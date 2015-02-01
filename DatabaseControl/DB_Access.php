@@ -12,9 +12,9 @@ class DB_Access
     private $user;
     private $pass;
     private $dataBase;
-    private conn;
+    private $conn;
 
-    void __construct()
+    function __construct()
     {
         $this->host = "localhost";
         $this->user = "root";
