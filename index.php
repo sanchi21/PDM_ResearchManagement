@@ -6,10 +6,14 @@
  * Time: 12:29 PM
  */
 
-require_once("DatabaseControl/)
+require_once("DatabaseControl/DB_Access.php");
 
+$a = new DB_Access();
+$name = $a -> login("Sanchayan");
+$addrss = $a->getDetails("Sanchayan");
+
+echo "<br>";
 echo "PDM Homepage 12:30";
-
-
-
+echo "<br>";
+echo "Address\t:\t".$addrss;
 ?>

@@ -6,32 +6,25 @@
  * Time: 1:21 PM
  */
 
-class DB_Access
+class DB_Connect
 {
-    private $host;
-    private $user;
-    private $pass;
-    private $dataBase;
-    private $conn;
+    private $host = "localhost";
+    private $user = "root";
+    private $pass = "";
+    private $dataBase = "pdm";
 
-    function __construct()
-    {
-        $this->host = "localhost:8080";
-        $this->user = "root";
-        $this->pass = "";
-        $this->dataBase = "pdm";
-    }
-
+    //Get Connection
     function getConnection()
     {
-        try {
-            $this->conn = mysqli_connect($this->host, $this->user, $this->pass, $this->dataBase);
-        }
-        catch(Exception e)
-        {
-            echo "Connection Error!";
-        }
-    }
-}
+        $conn = new mysqli($this->host, $this->user, $this->pass, $this->dataBase);
 
+        //check connection
+        if ($conn->connect_error) {
+            die("Connection Failed : " . $conn->connect_error);
+        }
+
+        return $conn;
+    }
+
+}
 ?>
