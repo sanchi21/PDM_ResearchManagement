@@ -7,6 +7,7 @@ if(isset($_POST['userid']) && isset($_POST['password'])) {
 
 	require_once('DatabaseControl/DB_Access.php');
 
+
     $userid = trim($_POST['userid']);
     $user_password = $_POST['password'];
 
