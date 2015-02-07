@@ -7,8 +7,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
     <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
     <script type="text/javascript" src="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
+
 </head>
-<body></body>
+<body>
+</body>
 </html>
 
 
@@ -25,12 +27,14 @@ require("../DatabaseControl/DB_Connect.php");
     $dba = new DB_Connect();
     $conn = $dba->getConnection();
 
-    $sql = "UPDATE users SET req_status=0,storage_sp=storage_sp+'$extra',extra=0 WHERE Staff_ID='$id' ";
+    $sql = "UPDATE users SET req_status=0,Storage_Limit=Storage_Limit+'$extra',extra=0 WHERE Staff_ID='$id' ";
 
     if ($conn->query($sql) === TRUE) {
         echo '<script type="text/javascript">alert("Request Accepted")</script>';
+
     } else {
         echo '<script type="text/javascript">alert("Failed")</script>';
+
     }
 
 

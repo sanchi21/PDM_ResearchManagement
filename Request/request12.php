@@ -23,7 +23,7 @@ require("../DatabaseControl/DB_Connect.php");
     $sql = "UPDATE users SET req_status=0,extra=0 WHERE Staff_ID='$id' ";
 
     if ($conn->query($sql) === TRUE) {
-        echo'<div class="alert alert-info" role="alert">Request Deleted</div>';
+        echo '<script type="text/javascript">alert("Request Deleted")</script>';
     }
     else {
         echo '<script type="text/javascript">alert("Failed")</script>';

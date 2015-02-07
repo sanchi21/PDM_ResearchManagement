@@ -58,7 +58,7 @@ if (isset($_POST['abc'])) {
 
         echo'
         <form method="post" accept-charset="utf-8" autocomplete="off" role="form" class="form-horizontal" >
-        <div class="panel panel-primary" style="width:50% ">
+        <div class="panel panel-primary" style="width:50%; margin-left:0.5cm ">
              <div class="panel-heading" ><h4><b>Request For storage</b></h4></div>
                <div class="panel-body">
                     <h4>' . $First_Name . ' ' . $Last_Name . ' has requested ' . $extra . ' GB of extra storage space</h4>
