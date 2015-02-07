@@ -15,7 +15,7 @@ class DB_Access
     {
         $dba = new DB_Connect();
         $conn = $dba->getConnection();
-        $sql = "SELECT First_Name from user where Staff_ID='$uname' and Password='$pass'";
+        $sql = "SELECT First_Name from users where Staff_ID='$uname' and Password='$pass'";
 
         $result = mysqli_query($conn,$sql);
 
