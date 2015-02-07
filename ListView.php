@@ -14,7 +14,7 @@
     <!-- Custom CSS -->
     <link href="includes/css/styles.css" rel="stylesheet">
 
-    <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/bootstrap/3.1.1/css/bootstrap.min.css">-->
+
     <link rel="stylesheet" href="style.css">
     <link href="http://www.jqueryscript.net/css/jquerysctipttop.css" rel="stylesheet" type="text/css">
     <link rel="stylesheet" href="http://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.min.css">
@@ -32,11 +32,66 @@
         <div class="modal-content">
             <br>
 
+            <div class="modal-body">
 
+                <form method="POST" action="">
+
+                    <fieldset>
+                        <!-- Sign In Form -->
+                        <!-- Text input-->
+                        <div class="control-group">
+                            <label class="control-label" id='' for="userid">Select Collabarators</label> <label id='checkLabel'><Input type = 'Checkbox' id='myCheck' Name ='ch1' value ='net'>Check All </label>
+
+                            <div class="controls">
+                                <?php
+
+
+
+                                ?>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+                </form>
+            </div>
         </div>
     </div>
 </div>
 
+<div class="modal fade bs-modal-sm" id="myModal2" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+        <div class="modal-content">
+            <br>
+
+            <div class="modal-body">
+
+                <form method="POST" action="">
+
+                    <fieldset>
+                        <!-- Sign In Form -->
+                        <!-- Text input-->
+                        <div class="control-group">
+                            <label class="control-label" for="userid">Select Collabarators</label>
+                            <p>
+
+                            </p>
+                            <div class="controls">
+                                <?php
+
+
+
+                                ?>
+                            </div>
+                        </div>
+
+
+                    </fieldset>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
 
 
 <div class="container" id="main">
@@ -163,8 +218,11 @@
                                 {
                                     $nm2 = $row2["Name"]." [".$row2["Size"]."]";
                                     $fid = $row2["File_ID"];
-                                    echo "<li class='san'><a href='download.php?id=$fid'>$nm2</a></li>";
+                                    echo "<li class='san'><a href='download.php?id=$fid'>$nm2 </a>  <button id='permit' name='permit' data-toggle='modal' data-target='#myModal' method class='btn btn-success'><span class='glyphicon glyphicon-hand-up'></span> </button> <button class='btn btn-danger' id='deny' name='deny' data-toggle='modal' data-target='#myModal2' method class='btn btn-success'><span class='glyphicon glyphicon-hand-down'></span> </button></li>";
+
                                 }
+
+                                //<a href="#myModal" class="dropdown-toggle" data-toggle="modal">
                                 echo"</ul>";
                             }
                             echo "</li>";
@@ -216,6 +274,10 @@
 <script src="includes/js/script.js"></script>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
 <script src="MultiNestedList.js"></script>
+
+
+
+
 </body>
 </html>
 
