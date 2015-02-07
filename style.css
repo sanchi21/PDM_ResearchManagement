@@ -1,0 +1,62 @@
+ul.san {
+    padding: 0em;
+}
+
+ul.san li.san, ul.san li.san ul.san li.san {
+    position:relative;
+    top:0;
+    bottom:0;
+    padding-bottom: 7px;
+
+}
+
+ul.san li.san ul.san {
+    margin-left: 4em;
+}
+
+li.san {
+    list-style-type: none;
+}
+
+li.san a {
+    padding:0 0 0 10px;
+    position: relative;
+    top:1em;
+}
+
+li.san a:hover {
+    text-decoration: none;
+}
+
+a.addBorderBefore:before {
+    content: "";
+    display: inline-block;
+    width: 2px;
+    height: 28px;
+    position: absolute;
+    left: -47px;
+    top:-16px;
+    border-left: 1px solid gray;
+}
+
+li.san:before {
+    content: "";
+    display: inline-block;
+    width: 25px;
+    height: 0;
+    position: relative;
+    left: 0em;
+    top:1em;
+    border-top: 1px solid gray;
+}
+
+ul.san li.san ul.san li.san:last-child:after, ul.san li.san:last-child:after {
+    content: '';
+    display: block;
+    width: 1em;
+    height: 1em;
+    position: relative;
+    background: #fff;
+    top: 9px;
+    left: -1px;
+}
