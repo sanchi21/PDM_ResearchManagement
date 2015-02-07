@@ -183,7 +183,7 @@ if(isset($_POST['userid']) && isset($_POST['password'])) {
 									<span class="glyphicon glyphicon-user"></span>Login
 									<strong class="caret"></strong>
 								</a>
-							</li>	00
+							</li>	
 								
 				        <?php endif; ?>
 						</ul><!-- end nav pull-right -->
