@@ -5,22 +5,15 @@ session_start();
 
 if(isset($_POST['userid']) && isset($_POST['password'])) {
 
-	require_once('DB_Connect.php');
+	require_once('DatabaseControl/DB_Access.php');
 
-    $userid = mysqli_real_escape_string($dbc, trim($_POST['userid']));
-    $user_password = mysqli_real_escape_string($dbc, trim($_POST['password']));
+    $userid = trim($_POST['userid']);
+    $user_password = $_POST['password'];
 
-    $sql = "SELECT First_Name from user where Staff_ID='$userid' and password='$user_password'";
+    $dba = new DB_Access();
+    $username = $dba->login($userid,$user_password);
 
-    $result = mysqli_query($dbc,$sql);
-
-    $count = mysqli_num_rows($result);
-
-    if($count > 0){
-        $username=mysqli_fetch_row($result);
-
-      
-
+    if($username != 'Error'){
         $_SESSION['username'] = $username[0];
         $_SESSION['user_id'] = $userid;
 

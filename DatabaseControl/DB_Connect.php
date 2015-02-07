@@ -10,7 +10,7 @@ class DB_Connect
 {
     private $host = "localhost";
     private $user = "root";
-    private $pass = "";
+    private $pass = "qwer1234";
     private $dataBase = "pdm";
 
     //Get Connection

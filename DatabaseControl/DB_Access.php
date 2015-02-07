@@ -6,24 +6,27 @@
  * Time: 2:49 PM
  */
 
-require_once("DB_Connect.php");
+require_once("DatabaseControl/DB_Connect.php");
 
 class DB_Access
 {
 
-    function login($uname)
+    function login($uname,$pass)
     {
         $dba = new DB_Connect();
         $conn = $dba->getConnection();
-        $sql = "SELECT * FROM users WHERE First_Name = '$uname'";
+        $sql = "SELECT First_Name from user where Staff_ID='$uname' and Password='$pass'";
+
         $result = mysqli_query($conn,$sql);
-        $num_results = $result->num_rows;
-        $row = $result->fetch_assoc();
 
-        $name = ($row['Last_Name']);
+        $count = mysqli_num_rows($result);
+        $username="Error";
+        if($count>0)
+        {
+            $username = mysqli_fetch_row($result);
+        }
 
-        echo "Name , Hi $name";
-        return 0;
+        return $username;
     }
 
     function getDetails($name)
