@@ -46,5 +46,32 @@ class DB_Access
 
         return $addrs;
     }
+
+    function getRoots()
+    {
+        $dba = new DB_Connect();
+        $conn = $dba->getConnection();
+        $result = $conn->query("select Name from storage where Folder='root'");
+
+        return $result;
+    }
+
+    function getFiles($root)
+    {
+        $dba = new DB_Connect();
+        $conn = $dba->getConnection();
+        $result = $conn->query("select * from storage where Folder='".$root."'");
+
+        return $result;
+    }
+
+    function downloadFile($id)
+    {
+        $dba = new DB_Connect();
+        $conn = $dba->getConnection();
+        $result = $conn->query("SELECT * FROM storage WHERE File_ID = '".$id."'");
+
+        return $result;
+    }
 }
 ?>
