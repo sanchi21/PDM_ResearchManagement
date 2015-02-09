@@ -59,6 +59,15 @@ class DB_Access
         return $result;
     }
 
+    function getNames()
+    {
+        $dba = new DB_Connect();
+        $conn = $dba->getConnection();
+        $result = $conn->query("select First_Name from user");
+
+        return $result;
+    }
+
     function getFiles($root)
     {
         $dba = new DB_Connect();
