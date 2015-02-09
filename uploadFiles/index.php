@@ -7,7 +7,7 @@ $result = mysqli_query($con,$sql);
 $row = $result->fetch_assoc();
 $storageSize = $row['Storage_Limit'];
 $usedSpace = $row['Used_Space'];
-$Staff_ID=001;
+$Staff_ID=001   ;
 
 ?>
 <html>
@@ -67,7 +67,7 @@ $Staff_ID=001;
                                 <!-- savePath: -->
                                 <select name="sltDirectory" id="sltDirectory">
                                     <?php
-                                        $resultDirectory = mysqli_query($con,"SELECT DISTINCT(`Folder`), `Staff_ID` FROM `pdm`.`storage` WHERE Staff_ID='001'");
+                                        $resultDirectory = mysqli_query($con,"SELECT DISTINCT(`Folder`), `userId` FROM `pdm`.`storage` WHERE Staff_ID='$Staff_ID'");
                                         while($row = mysqli_fetch_array($resultDirectory)) {
                                         echo '<option value="'.$row['Folder'].'">'. $row['Folder'].' </option>';
                                     }

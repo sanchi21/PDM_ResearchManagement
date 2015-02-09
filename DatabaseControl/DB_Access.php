@@ -76,5 +76,12 @@ class DB_Access
 
         return $result;
     }
+
+    function getUsedSpace($uid)
+    {
+        $dba = new DB_Connect();
+        $conn = $dba->getConnection();
+
+    }
 }
 ?>
