@@ -13,6 +13,7 @@
 
     <!--styles-->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="includes/css/icon.css">
     <!--fonts-->
     <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Oswald">
     <style>
@@ -200,7 +201,9 @@
             <div class="panel-heading"><b><center><H4>View Your Research Data</H4></center></b></div>
             <div class="panel-body">
 
-                <!-- Indicates caution should be taken with this action -->
+
+                <center><img src="images/fea1.jpg" alt="Research" class="img-circle"></center>
+                <p>are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on</p>
                 <button type="button" class="btn btn-warning" style="width: 100%">GO</button>
 
             </div>
@@ -211,7 +214,10 @@
         <div class="panel-heading"><b><center><H4>Share Research file</H4></center></b></div>
         <div class="panel-body">
 
-            <!-- Indicates a dangerous or potentially negative action -->
+            <img src="../images/fea2.jpg" alt="CSS3" class="img-circle">
+
+            <p>are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on</p>
+
             <button type="button" class="btn btn-danger" style="width: 100%">GO</button>
         </div>
     </div>
@@ -221,7 +227,11 @@
     <div class="panel-heading"><b><center><H4>Get Additional Space</H4></center></b></div>
     <div class="panel-body">
 
-        <!-- Contextual button for informational alert messages -->
+        <img src="../images/fea3.jpg" alt="Bootstrap 3" class="img-circle">
+
+        <p>are going to use a passage of Lorem Ipsum, you need to be sure there isn't anything embarrassing hidden in the middle of text. All the Lorem Ipsum generators on</p>
+
+
         <button type="button" class="btn btn-info" style="width: 100%">GO</button>
     </div>
 </div>
